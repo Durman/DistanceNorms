@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+        .container {
+            display: none;
+        }
+	</style>
+</head>
+<body>
+    <div class="main">
+        <div class="top-row">
+            <form action="" method="get">
+                <label>Select one:
+                <select id="select-one" class="select" autofill="false">
+                    <option value="" selected></option>
+                    <option value="one">one</option>
+                    <option value="two">two</option>
+                    <option value="three">three</option>
+                </select>
+                </label>
+                <label>SelectTwo:
+                <select id="select-two" class="select" autofill="false">
+                    <option value="" selected></option>
+                    <option value="green">green</option>
+                    <option value="yellow">yellow</option>
+                    <option value="red">red</option>
+                </select>
+                </label>
+            </form>
+        </div>
+        <div class="main-row">
+            <div class="container" id="one-green">
+                <h2>Text one green</h2>
+                <div class="text">
+                    One green
+                </div>
+            </div>
+            <div class="container" id="two-green">
+                <h2>Text two green</h2>
+                <div class="text">
+                    Two green
+                </div>
+            </div>
+            <div class="container" id="tree-green">
+                <h2>Text tree green</h2>
+                <div class="text">
+                    Three green
+                </div>
+            </div>
+            <div class="container" id="one-yellow">
+                <h2>Text one yellow</h2>
+                <div class="text">
+                    One yellow
+                </div>
+            </div>
+            <div class="container" id="two-yellow">
+                <h2>Text two yellow</h2>
+                <div class="text">
+                    Two yellow
+                </div>
+            </div>
+            <div class="container" id="three-yellow">
+                <h2>Text tree yellow</h2>
+                <div class="text">
+                    Three yellow
+                </div>
+            </div>
+            <div class="container" id="one-red">
+                <h2>Text one red</h2>
+                <div class="text">
+                    One red
+                </div>
+            </div>
+            <div class="container" id="two-red">
+                <h2>Text two red</h2>
+                <div class="text">
+                    Two red
+                </div>
+            </div>
+            <div class="container" id="three-red">
+                <h2>Text three red</h2>
+                <div class="text">
+                    Three red
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    let currentTextId = '';
+	let selects = document.querySelectorAll('.select');
+	console.log(selects);
+	for (let i in selects) {
+        selects[i].onchange = showTextOnClick;
+	}
+	function showTextOnClick() {
+        let selectOne = document.getElementById('select-one');
+        let selectTwo = document.getElementById('select-two');
+        if (selectOne && selectTwo) {
+            let newTextId = selectOne.value+'-'+selectTwo.value;
+            let newText = document.getElementById(newTextId);
+            if (currentTextId.length > 0) {
+                let oldText = document.getElementById(currentTextId);
+                if (oldText) {
+                    oldText.style.display = 'none';
+                }
+            }
+            if (newText) {
+                newText.style.display = 'block';
+                currentTextId = newTextId;
+            }
+        }
+	}
+</script>
+</body>
+</html> 
