@@ -1,0 +1,46 @@
+.main{
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+.header{
+    max-width: 420px;
+    margin: auto;
+}
+
+.header_text{
+    font-size: 40px;
+    margin: 0px;
+}
+
+.header_links{
+    text-align: right;
+    margin: 0px;
+}
+
+.links{
+    font-style: italic;
+    color: black;
+    padding-left: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.links:visited{
+    color: black;
+}
+
+.links:hover{
+    color: red;
+}
+
+.description{
+    margin: 20px;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.container{
+    text-align: justify;
+}

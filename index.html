@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Калькулятор расстояний</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
         .container {
             display: none;
         }
 	</style>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="main">
+        <div class="header">
+            <p class="header_text">Калькулятор расстояний</p>
+            <p class="header_links">
+                <a href="https://github.com/Durman/DistanceNorms" class="links">О проекте</a>
+                <a href="https://github.com/Durman/DistanceNorms/discussions" class="links">Задать вопрос</a>
+            </p>
+        </div>
+        <div class="description">
+            Данный калькулятор выдаёт минимальное расстояние между двумя объектами в соответсвии с требованиями
+            нормативных документов Российской федерации.
+        </div>
         <div class="top-row">
             <form action="" method="get">
-                <label>Select one:
+                <label>Объект 1:
                 <select id="select-one" class="select" autofill="false">
                     <option value="" selected></option>
                     <option value="water">Водопровод</option>
@@ -25,7 +37,7 @@
                     <option value="heat">Тепловые сети</option>
                 </select>
                 </label>
-                <label>SelectTwo:
+                <label>Объект 2:
                 <select id="select-two" class="select" autofill="false">
                     <option value="" selected></option>
                     <option value="water">Водопровод</option>
@@ -40,8 +52,8 @@
         </div>
         <div class="main-row">
             <div class="container" id="water-water">
-                <h2>0.5 - 5 м.</h2>
                 <div class="text">
+                    <h2>0.5 - 5 м.</h2>
                     <p>
                     СНиП 2.04.02-84 Водоснабжение. Наружные сети и сооружения. (таб.35) для водоводов!
                     Обсуждение термина водовода - http://forum.abok.ru/index.php?showtopic=40343&st=0 (одна из версий трубопровод от водозабора до станции первого подъема)
